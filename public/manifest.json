@@ -1,11 +1,26 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Calculator - React App",
+  "name": "A calculator web app created with react and MathJS",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "favicon1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon2.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon3.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon4.png",
+      "sizes": "96x96",
+      "type": "image/png"
     },
     {
       "src": "logo192.png",

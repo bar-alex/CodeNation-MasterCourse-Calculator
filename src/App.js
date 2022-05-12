@@ -25,8 +25,8 @@ import cycleBackgrounds from './cycleBackgrouds';
 import { evalForSqrt, resolveEqual, closeParenthesis } from './formulaHelpers';
 import { labelDigits, labelFuncs, bindButtonKeyListener, specialFunc } from './buttonKeys';
 
-// start the cycleBackgrounds fucntion
-cycleBackgrounds(10);
+// start the cycleBackgrounds function
+cycleBackgrounds(10);   // BUG: on the first change it just jumps over without the transition
 
 // binds to the keydown event
 bindButtonKeyListener();
