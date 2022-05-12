@@ -1,9 +1,10 @@
 # CodeNation-MasterCourse-Calculator
+
 A calculator web app build with React and MathJS for the master course week 5
 
-The projevt is live at https://frabjous-selkie-20af8d.netlify.app/
+The projevt is live at [https://frabjous-selkie-20af8d.netlify.app/](https://frabjous-selkie-20af8d.netlify.app/)
 
-Here's some of the stuff I got working in this project: 
+Here's some of the stuff I got working in this project:
 
 * Using components, hooks, modules, event listener and event dispatcher
 * Parsing the expression and replacing symbols for actual functions, adding missing opening parenthesis
@@ -13,10 +14,9 @@ Here's some of the stuff I got working in this project:
 * Catching, validating and handling errors
 * Slowly cycling between a few backgrounds
 
-
 ---
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
