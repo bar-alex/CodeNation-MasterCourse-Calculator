@@ -40,9 +40,8 @@ html {
 body{
   /* background: fixed no-repeat url("/assets/background.webp"); */
   transition: 
-    background-size 2s ease, 
-    background-image 2s ease,
-    transfrom 2s ease;
+    background-image 2s ease 100ms,
+    transfrom 2s ease 100ms;
   
   background: fixed no-repeat url("./assets/background1.jpg");
   background-size: cover;
