@@ -20,7 +20,6 @@ let backgroundImages = [
     background8,
 ];
 
-
 // cycle through background
 const cycleBackgrounds = (seconds = cycleInterval) => setInterval(() => {
     const rnd = Math.floor( Math.random() * backgroundImages.length );
