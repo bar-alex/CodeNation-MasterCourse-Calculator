@@ -7,12 +7,13 @@ The project is live at [https://frabjous-selkie-20af8d.netlify.app/](https://fra
 Here's some of the stuff I got working in this project:
 
 * Using components, hooks, modules, event listener and event dispatcher
+* Neumorphic style design elements
 * Parsing the expression and replacing symbols for actual functions, adding missing opening parenthesis
 * Displaying the original expression (for user's benefit) while getting the result value from the changed and valid expression
 * Keeps the last valid result visible while the expression is incomplete (just after an operator is pressed)
 * Binding the keys corresponding to the buttons and delegating the key press to the buttons click events
 * Catching, validating and handling errors
-* Slowly cycling between a few backgrounds
+* Slowly cycling backgrounds
 
 ---
 

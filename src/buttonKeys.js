@@ -23,7 +23,7 @@ const handleKey = (evt) => {
 
   // all the keys in just one big string
   const allKeys = [...labelDigits, ...labelFuncs].join('');
-  // if the keypress is not in the keys tsirng then return
+  // if the keypress is not in the keys string then return
   if(allKeys.indexOf(lbl)===-1) 
     return;
 
@@ -31,11 +31,15 @@ const handleKey = (evt) => {
   evt.preventDefault();
   // find the button for a visual effect
   const btn = document.querySelector(`.btn[label='${lbl}']`);
-  console.log('getButtonForLabel -> ',btn);
+  // console.log('getButtonForLabel -> ',btn);
   // hope for a visual feedback by simulating a click
-  if(btn) 
+  if(btn) {
+    btn.focus()
+    const keyEvt = new KeyboardEvent('keydown',{'keyCode':32,'which':32});
+    // btn.dispatchEvent( keyEvt );
     btn.dispatchEvent(new MouseEvent('click', {bubbles: true}));
-    
+    // console.log('handleKey', evt, 'dispatch', keyEvt );
+  }
 };
 
 // like an intro or something .. cool

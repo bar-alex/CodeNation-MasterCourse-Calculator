@@ -1,13 +1,23 @@
 
-import background from './assets/background.jpg';
 import background1 from './assets/background1.jpg';
 import background2 from './assets/background2.jpg';
+import background3 from './assets/background3.jpg';
+import background4 from './assets/background4.jpg';
+import background5 from './assets/background5.jpg';
+import background6 from './assets/background6.jpg';
+import background7 from './assets/background7.jpg';
+import background8 from './assets/background8.jpg';
 
-let cycleInterval = 5;    // 10 seconds
+let cycleInterval = 30;    // 10 seconds
 let backgroundImages = [
-    background,
     background1,
     background2,
+    background3,
+    background4,
+    background5,
+    background6,
+    background7,
+    background8,
 ];
 
 
@@ -17,7 +27,7 @@ const cycleBackgrounds = (seconds = cycleInterval) => setInterval(() => {
     const styleText = `fixed no-repeat url("${backgroundImages[rnd]}")`;
     document.body.style.background = styleText;
     document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundAttachment = 'fixed';
+    // document.body.style.backgroundAttachment = 'fixed';
 }, 1000 * seconds);  // 5 min ->  1000*60*5
 
 // const cycleBackgrounds = (seconds = cycleInterval) => void setTimeout( setInterval(() => {

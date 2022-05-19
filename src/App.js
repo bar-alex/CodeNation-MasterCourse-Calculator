@@ -59,7 +59,7 @@ function App() {
         </p>
       </header>
 
-      <div id="scene">
+      <div id="scene" class="neumorphic-main">
         <Display idComponent="display" textFormula={formula}/>
         <div id="area-digits">
           {
@@ -101,14 +101,14 @@ const Display = props => {
   } catch(err) {} finally {
     valueForm = valueForm || 0;
   }
-  console.log('formula = ', textForm, 'value = ', valueForm, 'lastValue', lastValue);
+  // console.log('formula = ', textForm, 'value = ', valueForm, 'lastValue', lastValue);
 
   // will show the last good value while adding operators
   if(valueForm!==0 || textForm==='') 
     setTimeout( ()=>setLastValue(valueForm) , 10) ; // calling it too fast after useState() throws a nasty error
 
   return (
-    <div id={props.idComponent}>
+    <div id={props.idComponent} className='neumorphic'>
       {/* <p>TEST 1 + 2 x √ ( 34 / 56 * 7 ) x 89 = 5318008</p> */}
       <p>{lastValue!==0?lastValue:''}</p>
       <p>{props.textFormula}</p>
@@ -119,9 +119,17 @@ const Display = props => {
 
 // props: label, type, click
 const CalcButton = props => {
+  let className = props.type==='digit'
+      ?'btn digit'
+      :( props.type==='func' ?'btn func' :'btn spec' );
+  className += ' neumorphic'
+
   return ( 
-    <button className={ props.type==='digit'?'btn digit':props.type==='func'?'btn func':'btn spec' } 
-      label={props.label} onClick={props.click} >{props.label}</button>
+    <button className={ className } 
+      label={props.label} 
+      onClick={props.click} 
+
+    > {props.label} </button>
   )
 }
 

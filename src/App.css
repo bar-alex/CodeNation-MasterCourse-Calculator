@@ -19,21 +19,34 @@ html {
 /*-- resets ---------------------------------*/
 
 :root{
-  --color-digit: grey; 
-  --color-digit-hover: #bbb;
-  --color-funcs: darkslategrey;
-  --color-funcs-hover: rgb(146, 146, 146);
+  --color-funcs: slategray;
+  --func-leftTop: rgb(84, 95, 107);
+  --func-rightBottom: rgb(147, 168, 189);
+
   --spec-color: orange;
-  --spec-color-hover: rgb(255, 200, 99);
-  
+  --spec-leftTop: rgb(208, 135, 0);
+  --spec-rightBottom: rgb(255, 183, 48);
+
+  --white: #FFFFFF;
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
 }
 
 body{
   /* background: fixed no-repeat url("/assets/background.webp"); */
-  transition: background 2s ease-in-out;
-  background: fixed no-repeat url("./assets/background.jpg");
+  transition: 
+    background-size 2s ease, 
+    background-image 2s ease,
+    transfrom 2s ease;
+  
+  background: fixed no-repeat url("./assets/background1.jpg");
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   
 }
 
@@ -89,7 +102,7 @@ body{
   justify-content: space-between;
   align-items: flex-start;
   
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 
@@ -115,6 +128,7 @@ body{
   /* flex-grow: 3; */
   text-align: right;
   white-space: nowrap;
+  overflow:hidden;
   /* border: 1px solid red; */
 }
 #display p:first-child{
@@ -171,40 +185,121 @@ body{
   text-align: center;
   justify-content: baseline;
   user-select: none;
-  color:white;
+  /* color:white; */
+  /* border-radius: 5px; */
+  color:slategray;
   font-size: 2rem ;
+  /* border: none; */
+}
+.btn:active {
+  box-shadow: 
+      inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), 
+      inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.btn:hover {
+  color: #6d5dfc;
+  text-shadow: #8abdff 1px 0 5px;
 }
 
 /* for digit buttons */
 .digit{
   width: 32%;
   height: 23%;
-  background: var(--color-digit);
+  /* background: var(--color-digit); */
 }
-.digit:hover{
-  background: var(--color-digit-hover) ;
-}
+/* .digit:active {
+  box-shadow: 
+      inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), 
+      inset -0.2rem -0.2rem 0.5rem var(--white);
+} */
 
 /* for function buttons */
 .func{
   width: 32%;
   height: 23%;
-  /* background-color:#282c34;*/
+  color: var(--greyLight-1);
   background: var(--color-funcs);
 }
-.func:hover{
-  background: var(--color-funcs-hover);
+.func:active {
+  box-shadow: 
+      inset 0.2rem 0.2rem 0.5rem var(--func-leftTop), 
+      inset -0.2rem -0.2rem 0.5rem var(--func-rightBottom);
 }
 /* for the special buttons, =,C,BS */
 .spec{
   width: 32%;
   height: 23%;
+  color: var(--greyLight-1);
   background: var(--spec-color);
 }
-.spec:hover{
-  background: var(--spec-color-hover);
+.spec:active {
+  box-shadow: 
+      inset 0.2rem 0.2rem 0.5rem var(--spec-leftTop), 
+      inset -0.2rem -0.2rem 0.5rem var(--spec-rightBottom);
 }
 /* target only the '=' */
 .spec[label='=']{
   width: 66%;
 }
+
+
+.neumorphic-main{
+  background-color: #EFEEEE;
+  border: rgb(255, 255, 255, .2);
+  border-radius: 5px;
+
+  box-shadow: 
+    rgba(0, 0, 0, 0.16) 0px 3px 6px, 
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+   
+}
+
+.neumorphic{
+  border: rgb(255, 255, 255, .2);
+  border-radius: 8px;
+  user-select: none;
+
+  box-shadow: 
+    rgba(0, 0, 0, 0.16) 0px 3px 6px, 
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+/*
+.neumorph-btn {
+  --white: #FFFFFF;
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+
+  color: var(--greyDark);
+  /* width: 15rem; 
+  /* height: 4rem; 
+  border-radius: 1rem;
+  box-shadow: 
+      0.3rem 0.3rem 0.6rem var(--greyLight-2), 
+      -0.2rem -0.2rem 0.5rem var(--white);
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.neumorph-btn:hover {
+  color: var(--primary);
+}
+.neumorph-btn:active {
+  box-shadow: 
+      inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), 
+      inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.neumorph-btn p {
+  font-size: 1.6rem;
+}
+*/
