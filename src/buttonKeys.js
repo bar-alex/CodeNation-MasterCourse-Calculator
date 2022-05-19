@@ -35,7 +35,7 @@ const handleKey = (evt) => {
   // hope for a visual feedback by simulating a click
   if(btn) {
     btn.focus()
-    const keyEvt = new KeyboardEvent('keydown',{'keyCode':32,'which':32});
+    // const keyEvt = new KeyboardEvent('keydown',{'keyCode':32,'which':32});
     // btn.dispatchEvent( keyEvt );
     btn.dispatchEvent(new MouseEvent('click', {bubbles: true}));
     // console.log('handleKey', evt, 'dispatch', keyEvt );
