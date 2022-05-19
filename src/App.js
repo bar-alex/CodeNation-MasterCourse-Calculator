@@ -26,7 +26,7 @@ import { evalForSqrt, resolveEqual, closeParenthesis } from './formulaHelpers';
 import { labelDigits, labelFuncs, bindButtonKeyListener, specialFunc } from './buttonKeys';
 
 // start the cycleBackgrounds function
-cycleBackgrounds(10);   // BUG: on the first change it just jumps over without the transition
+cycleBackgrounds(40);   // BUG: on the first change it just jumps over without the transition
 
 // binds to the keydown event
 bindButtonKeyListener();
