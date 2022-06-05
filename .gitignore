@@ -24,3 +24,5 @@ yarn-error.log*
 
 .vscode
 not_needed
+debug.log
+src/debug.log

@@ -31,6 +31,7 @@ html {
   --primary-light: #8abdff;
   --primary: #6d5dfc;
   --primary-dark: #5b0eeb;
+  /* --greyLight-1: #E4EBF5; */
   --greyLight-1: #E4EBF5;
   --greyLight-2: #c8d0e7;
   --greyLight-3: #bec8e4;
@@ -74,7 +75,7 @@ body{
 
 .App-header {
   align-self: stretch;
-  background-color: #282c34;
+  background-color: rgb(40, 44, 52, .5);
   min-height: 10vh;
   
   display: flex;
@@ -94,7 +95,9 @@ body{
   margin: auto;
   width: 80vh;
   height: 60vh;
-  /* min-height:min-content; */
+  
+  min-height:340px;
+  min-width: 400px;
 
   display: flex;
   flex-wrap: wrap;
@@ -152,7 +155,7 @@ body{
 /* the area where the digits reside */
 #area-digits{
   width: 60%;
-  height: 78%;
+  height: calc( 78% - 1vh );
   margin: 5px;
 
   display: flex;
@@ -165,8 +168,8 @@ body{
 
 /* the area for the function buttons */
 #area-functions{
-  width: 36%;
-  height: 78%;
+  width: 34%;
+  height: calc( 78% - 1vh );
   margin: 5px;
 
   display: flex;
@@ -224,8 +227,13 @@ body{
       inset 0.2rem 0.2rem 0.5rem var(--func-leftTop), 
       inset -0.2rem -0.2rem 0.5rem var(--func-rightBottom);
 }
+.func:hover {
+  /* color: #6d5dfc; */
+  color: orange;
+  text-shadow: #8abdff 1px 0 5px;
+}
 /* for the special buttons, =,C,BS */
-.spec{
+.spec {
   width: 32%;
   height: 23%;
   color: var(--greyLight-1);
@@ -235,6 +243,10 @@ body{
   box-shadow: 
       inset 0.2rem 0.2rem 0.5rem var(--spec-leftTop), 
       inset -0.2rem -0.2rem 0.5rem var(--spec-rightBottom);
+}
+.spec:hover {
+  color: var(--color-funcs);
+  text-shadow: #8abdff 1px 0 5px;
 }
 /* target only the '=' */
 .spec[label='=']{
@@ -250,7 +262,6 @@ body{
   box-shadow: 
     rgba(0, 0, 0, 0.16) 0px 3px 6px, 
     rgba(0, 0, 0, 0.23) 0px 3px 6px;
-   
 }
 
 .neumorphic{
